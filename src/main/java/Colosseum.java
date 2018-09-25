@@ -73,6 +73,19 @@ public class Colosseum {
      */
     public static Pokemon buildPokemon() {
         Pokemon tempPokemon = new Pokemon();
+        System.out.println("Enter the number of hitpoints (1-50)");
+        tempPokemon.hitPoints = myScan.nextInt();
+        while (tempPokemon.hitPoints >= 1 || tempPokemon.hitPoints < MAX_HIT_POINTS) {
+            System.out.println(tempPokemon.hitPoints);
+            tempPokemon.hitPoints = myScan.nextInt();
+        }
+
+
+
+
+
+        System.out.println("Enter name for Pokemon");
+        tempPokemon.name = myScan.next();
         return tempPokemon;
     }
 
